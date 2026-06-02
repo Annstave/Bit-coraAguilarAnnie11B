@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora Tecnología Aguilar</title>
+    <link rel="icon" type="imagen/png" href="recursos/img/LG Capouilliez 1.png">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        header{
+            padding: 20px;
+            background-color: pink;
+        }
+        main{
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            border-top: 1px solid black;
+            background-color: rgb(251, 192, 251);
+        }
+        @media(max-width:600px){
+            footer{
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+
+            }
+            }
+            html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        /* Instrucción 1: Título con sombra neón morada */
+        h1 {
+            color: white; /* El texto blanco hace que el neón resalte más */
+            text-shadow:
+                0 0 5px #bc13fe,
+                0 0 10px #bc13fe,
+                0 0 20px #bc13fe,
+                0 0 40px #bc13fe;
+        }
+
+        header {
+            padding: 20px;
+            background-color: pink;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Instrucción 2: Efecto zoom en el logo */
+        footer img {
+            transition: transform 0.3s ease; /* Hace que el zoom sea suave */
+            cursor: pointer;
+        }
+
+        footer img:hover {
+            transform: scale(1.2); /* Aumenta el tamaño un 20% */
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            border-top: 1px solid black;
+            background-color: rgb(251, 192, 251);
+        }
+
+        @media(max-width:600px){
+            footer {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+        }
+        .semana {
+            background-color: white;
+            border-radius: 12px; /* Bordes redondeados */
+            padding: 20px;
+            margin-bottom: 25px; /* Espacio entre una semana y otra */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            border: 1px solid #eee;
+            transition: 0.3s; /* Para que la animación sea suave */
+            text-align: left; /* Alineación del texto para lectura fácil */
+        }
+
+        /* Efecto opcional: que la tarjeta se eleve un poco al pasar el mouse */
+        .semana:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .semana h2 {
+            margin-top: 0;
+            color: #bc13fe; /* Usando el morado de tu título */
+            border-bottom: 2px solid pink;
+            display: inline-block;
+        }
+        /* Estilo para que el PDF sea gigante y profesional */
+        .contenedor-pdf {
+            width: 100%; /* Ocupa el 100% del ancho de la tarjeta */
+            height: 900px; /* Altura considerable para ver casi toda la página */
+            border: 2px solid pink; /* Borde rosa para que combine con tu diseño */
+            border-radius: 10px;
+            box-sizing: border-box; /* Evita que el borde ensanche la tarjeta */
+            margin-top: 15px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Encabezado de página web </h1>
+    </header>
+    <main>
+        <h4>Contenido de página web</h4>
+    </main>
+<main>
+    <div class="semana">
+        <h2>Semana 1: Introducción</h2>
+        <p>Hoy aprendimos sobre la estructura básica de HTML y cómo personalizar el entorno de Visual Studio Code.</p>
+        
+        <iframe 
+            src="recursos/IntroducciónArduino .pdf" 
+            class="contenedor-pdf"
+            type="application/pdf">
+        </iframe>
+
+        <p style="font-size: 0.9em; margin-top: 10px;">
+            <a href="recursos/IntroducciónArduino .pdf" target="_blank" style="color: #bc13fe;">
+                ¿No puedes ver el archivo? Haz clic aquí para descargarlo.
+            </a>
+        </p>
+    </div>
+
+    <div class="semana">
+        <h2>Semana 2: Estilos CSS</h2>
+        <p>Aprendimos a usar sombras neón y efectos de transición para las imágenes del colegio.</p>
+    </div>
+
+    <div class="semana">
+        <h2>Semana 3: Simulación en Tinkercad</h2>
+        <p>En esta sesión realizamos una simulación de un semáforo RGB utilizando Arduino Uno. Programamos los pines digitales para alternar entre colores usando funciones de tiempo.</p>
+        
+        <div style="text-align: center; margin-top: 15px;">
+            <video controls style="width: 100%; max-width: 800px; border-radius: 8px; border: 2px solid pink;">
+                <source src="recursos/videorobotcafinal.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+    </div>
+</main>
+    <footer>
+        <span>2026 @annito</span>
+    <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" alt="" width="200" height="50">
+    </footer>
+    <input type="text" placeholder="Nombre del Proyecto">
+</body>
+</html>
