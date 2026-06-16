@@ -11,56 +11,51 @@
             margin: 0;
             font-family: Arial, sans-serif;
         }
-        body{
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-        }
-        header{
-            padding: 20px;
-            background-color: pink;
-        }
-        main{
-            flex: 1;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        footer{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 50px;
-            border-top: 1px solid black;
-            background-color: rgb(251, 192, 251);
-        }
-        @media(max-width:600px){
-            footer{
-                flex-direction: column;
-                gap: 15px;
-                padding: 20px;
-
-            }
-            }
-            html, body {
-            height: 100%;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
+        
         body {
             display: flex;
             flex-direction: column;
             text-align: center;
         }
 
-        /* Instrucción 1: Título con sombra neón morada */
+        /* Título con animación de neón cambiante */
         h1 {
-            color: white; /* El texto blanco hace que el neón resalte más */
-            text-shadow:
-                0 0 5px #bc13fe,
-                0 0 10px #bc13fe,
-                0 0 20px #bc13fe,
-                0 0 40px #bc13fe;
+            color: white; /* Texto blanco para que resalte el neón */
+            font-size: 2.5em;
+            margin: 0;
+            animation: neonChanger 8s linear infinite; /* Animación continua de 8 segundos */
+        }
+
+        /* Definición de la animación de colores para el neón */
+        @keyframes neonChanger {
+            0%, 100% {
+                text-shadow:
+                    0 0 5px #bc13fe,
+                    0 0 10px #bc13fe,
+                    0 0 20px #bc13fe,
+                    0 0 40px #bc13fe;
+            }
+            25% {
+                text-shadow:
+                    0 0 5px #ff007f,
+                    0 0 10px #ff007f,
+                    0 0 20px #ff007f,
+                    0 0 40px #ff007f;
+            }
+            50% {
+                text-shadow:
+                    0 0 5px #00d2ff,
+                    0 0 10px #00d2ff,
+                    0 0 20px #00d2ff,
+                    0 0 40px #00d2ff;
+            }
+            75% {
+                text-shadow:
+                    0 0 5px #00ff66,
+                    0 0 10px #00ff66,
+                    0 0 20px #00ff66,
+                    0 0 40px #00ff66;
+            }
         }
 
         header {
@@ -75,14 +70,14 @@
             margin: 0 auto;
         }
 
-        /* Instrucción 2: Efecto zoom en el logo */
+        /* Efecto zoom en el logo */
         footer img {
-            transition: transform 0.3s ease; /* Hace que el zoom sea suave */
+            transition: transform 0.3s ease;
             cursor: pointer;
         }
 
         footer img:hover {
-            transform: scale(1.2); /* Aumenta el tamaño un 20% */
+            transform: scale(1.2);
         }
 
         footer {
@@ -101,18 +96,18 @@
                 padding: 20px;
             }
         }
+
         .semana {
             background-color: white;
-            border-radius: 12px; /* Bordes redondeados */
+            border-radius: 12px;
             padding: 20px;
-            margin-bottom: 25px; /* Espacio entre una semana y otra */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            margin-bottom: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border: 1px solid #eee;
-            transition: 0.3s; /* Para que la animación sea suave */
-            text-align: left; /* Alineación del texto para lectura fácil */
+            transition: 0.3s;
+            text-align: left;
         }
 
-        /* Efecto opcional: que la tarjeta se eleve un poco al pasar el mouse */
         .semana:hover {
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             transform: translateY(-5px);
@@ -120,59 +115,59 @@
 
         .semana h2 {
             margin-top: 0;
-            color: #bc13fe; /* Usando el morado de tu título */
+            color: #bc13fe;
             border-bottom: 2px solid pink;
             display: inline-block;
         }
-        /* Estilo para que el PDF sea gigante y profesional */
+
         .contenedor-pdf {
-            width: 100%; /* Ocupa el 100% del ancho de la tarjeta */
-            height: 900px; /* Altura considerable para ver casi toda la página */
-            border: 2px solid pink; /* Borde rosa para que combine con tu diseño */
+            width: 100%;
+            height: 900px;
+            border: 2px solid pink;
             border-radius: 10px;
-            box-sizing: border-box; /* Evita que el borde ensanche la tarjeta */
+            box-sizing: border-box;
             margin-top: 15px;
             display: block;
         }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Encabezado de página web </h1>
+        <h1>Encabezado de página web</h1>
     </header>
+
     <main>
-        <h4>Contenido de página web</h4>
-    </main>
-<main>
-    <div class="semana">
-        <h2>Semana 1: Introducción</h2>
-        <p>Hoy aprendimos sobre la estructura básica de HTML y cómo personalizar el entorno de Visual Studio Code.</p>
-        
-        <iframe 
-            src="recursos/IntroducciónArduino .pdf" 
-            class="contenedor-pdf"
-            type="application/pdf">
-        </iframe>
+        <div class="semana">
+            <h2>Semana 1: Introducción</h2>
+            <p>Hoy aprendimos sobre la estructura básica de HTML y cómo personalizar el entorno de Visual Studio Code.</p>
+            
+            <iframe 
+                src="recursos/IntroducciónArduino .pdf" 
+                class="contenedor-pdf"
+                type="application/pdf">
+            </iframe>
 
-        <p style="font-size: 0.9em; margin-top: 10px;">
-            <a href="recursos/IntroducciónArduino .pdf" target="_blank" style="color: #bc13fe;">
-                ¿No puedes ver el archivo? Haz clic aquí para descargarlo.
-            </a>
-        </p>
-    </div>
-
-    <div class="semana">
-        <h2>Semana 2: Simulación en Tinkercad</h2>
-        <p>En esta sesión realizamos una simulación de un semáforo RGB utilizando Arduino Uno. Programamos los pines digitales para alternar entre colores usando funciones de tiempo.</p>
-        
-        <div style="text-align: center; margin-top: 15px;">
-            <video controls style="width: 100%; max-width: 800px; border-radius: 8px; border: 2px solid pink;">
-                <source src="recursos/videorobotcafinal.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de videos.
-            </video>
+            <p style="font-size: 0.9em; margin-top: 10px;">
+                <a href="recursos/IntroducciónArduino .pdf" target="_blank" style="color: #bc13fe;">
+                    ¿No puedes ver el archivo? Haz clic aquí para descargarlo.
+                </a>
+            </p>
         </div>
-    </div>
-    <div class="semana">
+
+        <div class="semana">
+            <h2>Semana 2: Simulación en Tinkercad</h2>
+            <p>En esta sesión realizamos una simulación de un semáforo RGB utilizando Arduino Uno. Programamos los pines digitales para alternar entre colores usando funciones de tiempo.</p>
+            
+            <div style="text-align: center; margin-top: 15px;">
+                <video controls style="width: 100%; max-width: 800px; border-radius: 8px; border: 2px solid pink;">
+                    <source src="recursos/videorobotcafinal.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+            </div>
+        </div>
+
+        <div class="semana">
             <h2>Semana 3: Práctica con LED RGB Físico</h2>
             <p>Realizamos el montaje físico y la programación en placa de un LED RGB. Configuramos las salidas digitales de nuestro Arduino para alternar de manera continua entre los colores rojo, azul y verde mediante ciclos programados.</p>
             
@@ -195,11 +190,12 @@
                 </video>
             </div>
         </div>
-</main>
+    </main>
+
     <footer>
         <span>2026 @annito</span>
-    <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" alt="" width="200" height="50">
+        <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" alt="Logo Colegio" width="200" height="50">
     </footer>
-    <input type="text" placeholder="Nombre del Proyecto">
+
 </body>
 </html>
